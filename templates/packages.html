@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+
+{% block title %}Tour Packages | TourEase{% endblock %}
+
+{% block content %}
+
+<!-- Page Banner -->
+<section class="package-banner text-center text-white">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Explore Tour Packages</h1>
+        <p>Discover amazing destinations at affordable prices</p>
+    </div>
+</section>
+
+<!-- Search -->
+<!-- Search -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="search-box shadow p-4 bg-white rounded">
+            <form action="{{ url_for('packages') }}" method="GET">
+                <div class="row g-2">
+
+                    <div class="col-md-9">
+                        <input type="text"
+                               name="search"
+                               class="form-control form-control-lg"
+                               placeholder="Search destinations (Goa, Manali, Kerala...)">
+                    </div>
+
+                    <div class="col-md-3">
+                        <button type="submit"
+                                class="btn btn-primary btn-lg w-100">
+                            Search
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Packages -->
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">
+            Best Selling Packages
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Package 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100">
+
+                    <img src="static/images/goa1.jpg"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h5>Goa Beach Tour</h5>
+
+                        <p>
+                            5 Days / 4 Nights
+                        </p>
+<div class="package-info">
+
+    <p>✈ Transport: Flight Included</p>
+
+    <p>🏨 Hotel: 3-Star Hotel</p>
+
+    <p>🍽 Meals: Breakfast Included</p>
+
+    <p>🚖 Sightseeing: Local Cab Included</p>
+
+</div>
+                        <h4 class="text-primary">
+                            ₹14,999
+                        </h4>
+
+                        <a href="/package_details/1" class="btn btn-primary">View Details</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100">
+
+                    <img src="static/images/manali1.jpg"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h5>Manali Adventure</h5>
+
+                        <p>
+                            6 Days / 5 Nights
+                        </p>
+<div class="package-info">
+
+    <p>✈ Transport: Flight Included</p>
+
+    <p>🏨 Hotel: 3-Star Hotel</p>
+
+    <p>🍽 Meals: Breakfast Included</p>
+
+    <p>🚖 Sightseeing: Local Cab Included</p>
+
+</div>
+                        <h4 class="text-primary">
+                            ₹18,999
+                        </h4>
+
+                       <a href="/package_details/2" class="btn btn-primary">View Details</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100">
+
+                    <img src="static/images/kerala.jpg"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h5>Kerala Backwaters</h5>
+
+                        <p>
+                            7 Days / 6 Nights
+                        </p>
+<div class="package-info">
+
+    <p>✈ Transport: Flight Included</p>
+
+    <p>🏨 Hotel: 3-Star Hotel</p>
+
+    <p>🍽 Meals: Breakfast Included</p>
+
+    <p>🚖 Sightseeing: Local Cab Included</p>
+
+</div>
+                        <h4 class="text-primary">
+                            ₹22,999
+                        </h4>
+
+                        <a href="/package_details/3" class="btn btn-primary">View Details</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Package 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100">
+
+                    <img src="static/images/kashmir.jpg"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h5>Kashmir Paradise</h5>
+
+                        <p>
+                            5 Days / 4 Nights
+                        </p>
+<div class="package-info">
+
+    <p>✈ Transport: Flight Included</p>
+
+    <p>🏨 Hotel: 3-Star Hotel</p>
+
+    <p>🍽 Meals: Breakfast Included</p>
+
+    <p>🚖 Sightseeing: Local Cab Included</p>
+
+</div>
+                        <h4 class="text-primary">
+                            ₹24,999
+                        </h4>
+
+                        <a href="/package_details/4" class="btn btn-primary">View Details</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Package 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100">
+
+                    <img src="static/images/dubai.jpg"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h5>Dubai Luxury Tour</h5>
+
+                        <p>
+                            4 Days / 3 Nights
+                        </p>
+<div class="package-info">
+
+    <p>✈ Transport: Flight Included</p>
+
+    <p>🏨 Hotel: 3-Star Hotel</p>
+
+    <p>🍽 Meals: Breakfast Included</p>
+
+    <p>🚖 Sightseeing: Local Cab Included</p>
+
+</div>
+                        <h4 class="text-primary">
+                            ₹39,999
+                        </h4>
+
+                        <a href="/package_details/5" class="btn btn-primary">View Details</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Package 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100">
+
+                    <img src="static/images/bali.jpg"
+                    class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h5>Bali </h5>
+
+                        <p>
+                            6 Days / 5 Nights
+                        </p>
+<div class="package-info">
+
+    <p>✈ Transport: Flight Included</p>
+
+    <p>🏨 Hotel: 3-Star Hotel</p>
+
+    <p>🍽 Meals: Breakfast Included</p>
+
+    <p>🚖 Sightseeing: Local Cab Included</p>
+
+</div>
+                        <h4 class="text-primary">
+                            ₹49,999
+                        </h4>
+
+                        <a href="/package_details/6" class="btn btn-primary">View Details</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

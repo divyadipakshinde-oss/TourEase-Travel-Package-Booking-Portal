@@ -1,0 +1,85 @@
+<!-- itinerary.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="itinerary-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Travel Itinerary</h1>
+            <p class="text-muted">
+                Your complete day-wise travel plan
+            </p>
+        </div>
+
+
+        <div class="itinerary-card shadow">
+
+            <div class="itinerary-header">
+                <h3>
+                    {{ booking.package_name }}
+                </h3>
+
+                <p>
+                    Travel Date:
+                    <b>{{ booking.travel_date }}</b>
+                </p>
+            </div>
+
+
+            <div class="itinerary-body">
+
+
+                <div class="day-box">
+                    <h4>Day 1 - Arrival & Check-in</h4>
+                    <ul>
+                        <li>Arrival at destination</li>
+                        <li>Hotel check-in</li>
+                        <li>Welcome activity and local visit</li>
+                    </ul>
+                </div>
+
+
+                <div class="day-box">
+                    <h4>Day 2 - Sightseeing</h4>
+                    <ul>
+                        <li>Visit popular tourist attractions</li>
+                        <li>Enjoy local food and culture</li>
+                        <li>Evening leisure activities</li>
+                    </ul>
+                </div>
+
+
+                <div class="day-box">
+                    <h4>Day 3 - Return Journey</h4>
+                    <ul>
+                        <li>Shopping and free time</li>
+                        <li>Hotel checkout</li>
+                        <li>Return journey</li>
+                    </ul>
+                </div>
+
+
+                <a href="{{ url_for('invoice', id=booking.id) }}"
+class="btn btn-success w-100 mt-3">
+
+                    <i class="fa fa-file"></i>
+                    Generate Invoice
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+{% endblock %}

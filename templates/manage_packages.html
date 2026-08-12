@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Packages | TourEase{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Manage Packages</h2>
+
+        <a href="/add_package" class="btn btn-success">
+            <i class="fas fa-plus"></i> Add Package
+        </a>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body">
+
+            <table class="table table-bordered table-hover text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Package Name</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for package in packages %}
+                    <tr>
+                        <td>{{ package[0] }}</td>
+                        <td>{{ package[1] }}</td>
+                        <td>₹{{ package[2] }}</td>
+
+                        <td>
+                            <a href="/edit_package/{{ package[0] }}"
+                               class="btn btn-warning btn-sm">
+                                Edit
+                            </a>
+
+                            <a href="/delete_package/{{ package[0] }}"
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Delete this package?')">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+<!-- my_bookings.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="my-bookings-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">My Bookings</h1>
+            <p class="text-muted">
+                View your confirmed travel bookings and manage your trips.
+            </p>
+        </div>
+
+
+        {% if bookings %}
+
+        <div class="row g-4">
+
+            {% for booking in bookings %}
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="booking-box shadow">
+
+                    <div class="booking-header">
+                        <h4>{{ booking.package_name }}</h4>
+                    </div>
+
+                    <div class="booking-body">
+
+                        <p>
+                            <i class="fa fa-calendar"></i>
+                            Travel Date:
+                            <b>{{ booking.travel_date }}</b>
+                        </p>
+
+                        <p>
+                            <i class="fa fa-users"></i>
+                            Travellers:
+                            <b>{{ booking.travelers }}</b>
+                        </p>
+
+                        <p>
+                            <i class="fa fa-phone"></i>
+                            Phone:
+                            <b>{{ booking.phone }}</b>
+                        </p>
+
+
+                        <a href="{{ url_for('itinerary', booking_id=booking.id) }}"
+                        class="btn btn-primary">
+                        View Itinerary
+                       </a>
+
+
+                        <a href="{{ url_for('invoice', id=booking.id) }}" 
+   class="btn btn-outline-success w-100">
+    <i class="fa fa-file"></i>
+    View Invoice
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        {% else %}
+
+        <div class="text-center p-5 shadow bg-white rounded">
+
+            <h3>No Bookings Found</h3>
+
+            <p class="text-muted">
+                You have not booked any tour packages yet.
+            </p>
+
+            <a href="{{ url_for('packages') }}" class="btn btn-primary">
+                Explore Packages
+            </a>
+
+        </div>
+
+        {% endif %}
+
+<a href="/feedback" class="btn btn-success">
+    Give Feedback
+</a>
+    </div>
+</section>
+
+
+{% endblock %}

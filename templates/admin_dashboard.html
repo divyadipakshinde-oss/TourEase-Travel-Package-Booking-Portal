@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard | TourEase{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h2 class="text-center mb-4">
+        Admin Dashboard
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card shadow text-center p-3">
+                <h5>Total Users</h5>
+                <h2>{{ total_users }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow text-center p-3">
+                <h5>Total Bookings</h5>
+                <h2>{{ total_bookings }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow text-center p-3">
+                <h5>Total Packages</h5>
+                <h2>{{ total_packages }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow text-center p-3">
+                <h5>Messages</h5>
+                <h2>{{ total_messages }}</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <a href="/manage_packages"
+               class="btn btn-primary w-100 py-3">
+                Manage Packages
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/manage_bookings"
+               class="btn btn-success w-100 py-3">
+                Manage Bookings
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/manage_users"
+               class="btn btn-warning w-100 py-3">
+                Manage Users
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

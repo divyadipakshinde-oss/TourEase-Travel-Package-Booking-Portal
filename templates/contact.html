@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us | TourEase{% endblock %}
+
+{% block content %}
+
+<!-- Contact Banner -->
+<section class="contact-banner text-center text-white">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Contact Us</h1>
+        <p class="lead">We're Here To Help You Plan Your Perfect Trip</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Contact Info -->
+            <div class="col-lg-5">
+
+                <div class="contact-info p-4 shadow">
+
+                    <h3 class="mb-4">Get In Touch</h3>
+
+                    <p>
+                        <i class="fas fa-map-marker-alt text-primary"></i>
+                        Pune, Maharashtra, India
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone text-success"></i>
+                        +91 9876543210
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope text-danger"></i>
+                        info@tourease.com
+                    </p>
+
+                    <p>
+                        <i class="fas fa-clock text-warning"></i>
+                        Mon - Sat : 9 AM - 7 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+
+                <div class="contact-form shadow p-4">
+
+                    <h3 class="mb-4">Send Message</h3>
+
+                    <form method="POST">
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+                                <input type="text"
+                                name="name"
+                                class="form-control"
+                                placeholder="Your Name"
+                                required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <input type="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Your Email"
+                                required>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text"
+                            name="phone"
+                            class="form-control"
+                            placeholder="Phone Number"
+                            required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text"
+                            name="subject"
+                            class="form-control"
+                            placeholder="Subject"
+                            required>
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea
+                            name="message"
+                            rows="5"
+                            class="form-control"
+                            placeholder="Write Your Message"
+                            required></textarea>
+                        </div>
+
+                        <button type="submit"
+                        class="btn btn-primary w-100">
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

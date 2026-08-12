@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Book Tour | TourEase{% endblock %}
+
+{% block content %}
+
+<!-- Booking Banner -->
+<section class="booking-banner text-center text-white">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Book Your Dream Tour</h1>
+        <p>Complete the form below to confirm your booking</p>
+    </div>
+</section>
+
+<!-- Booking Form -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="booking-card">
+
+                    <h2 class="text-center mb-4">
+                        Tour Booking Form
+                    </h2>
+
+                    <form method="POST">
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+                                <label>Full Name</label>
+                                <input type="text"
+                                class="form-control"
+                                name="name"
+                                required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Email Address</label>
+                                <input type="email"
+                                class="form-control"
+                                name="email"
+                                required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Phone Number</label>
+                                <input type="tel"
+                                class="form-control"
+                                name="phone"
+                                required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Select Package</label>
+                                <select class="form-select" name="package">
+                                    <option>Goa Beach Tour</option>
+                                    <option>Manali Adventure</option>
+                                    <option>Kerala Backwaters</option>
+                                    <option>Kashmir Paradise</option>
+                                    <option>Dubai Luxury Tour</option>
+                                    <option>Bali</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Travel Date</label>
+                                <input type="date"
+                                class="form-control"
+                                name="travel_date"
+                                required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Number of Travelers</label>
+                                <input type="number"
+                                class="form-control"
+                                name="travelers"
+                                min="1"
+                                required>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <label>Special Requirements</label>
+                                <textarea class="form-control"
+                                rows="4"
+                                name="message"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit"
+                                class="btn btn-warning w-100 booking-btn">
+                                    Confirm Booking
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
